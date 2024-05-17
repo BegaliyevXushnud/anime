@@ -1,0 +1,238 @@
+
+@font-face {
+    font-family: Nunito;
+    src: url(../FONTLAR/Nunito_Sans/static/NunitoSans_10pt-Italic.ttf);
+}
+:root{
+    --red:#E50914;
+    --black:#000000;
+    --light-color:#181818;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0, .1);
+}
+body{
+    background-color: #181818;
+}
+*{
+    font-family: Nunito;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    color: #fff;
+    font-size: 5rem;
+    font-weight: bolder;
+    text-decoration: none;
+}
+header .logo i{
+    color: var(--red);
+}
+header .navbar a{
+    font-size: 2.6rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    ;
+   color: #fff;
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color: #fff;
+    background: var(--red);
+}
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color: #fff;
+    border-radius: 50%;
+    background: var(--red);
+}
+header .icons i:hover,
+header .icons a:hover{
+    color: var(--red);
+    background: #fff;
+    transform: rotate(360deg);
+}
+header .icons #menu-bars{
+    display: none;
+}
+
+
+.home{
+    padding: 0;
+}
+.home .box{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    justify-content: flex-end;
+    padding: 2rem 9%;
+}
+.home .box{
+    justify-content: flex-start;
+}
+.home  .box  .second{
+    justify-content: flex-end;
+}
+.content{
+    width: 50rem;
+}
+ .content h3{
+    font-size: 6rem;
+    color: #fff;
+    padding-top: .5rem;
+    text-transform: uppercase;
+}
+.content p{
+    line-height: 2;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.navbar{
+    display: flex;
+    gap: 30px;
+}
+.navbar a{
+    text-decoration: none;
+}
+
+
+.vid{
+    width: 100%;
+    height: 1000px;
+    background-color: #181818;
+    margin: 0 auto;
+    display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+ align-content: center;
+ padding: 50px;
+ gap: 50px;
+  
+}
+.vidio{
+    width: 40%;
+    height: 400px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+}
+.vidio video{
+    width: 100%;
+    height: 100%;
+
+}
+.h1{
+    text-align: center;
+    margin-top: 1cm;
+    color: #fff;
+    font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+@media(max-width:758px){
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+padding: 1rem;
+clip-path: polygon(0 0, 100% 0, 100% 0, 0 0) ;
+    }
+
+header .navbar .active{
+    clip-path: polygon(0 0 ,100% 0, 100% 100%, 0 100%);
+}
+
+    header .navbar a{
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--red);
+    }
+}
+@media(max-width:468px){
+html{
+    font-size: 50%;
+}
+}
